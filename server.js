@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+let port = process.env.PORT || 3000;
 // const path = require("path")
 const http = require("http").createServer(app);
 
@@ -7,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 // console.log();
 
-http.listen(3000, ()=>{
+http.listen(port, ()=>{
     console.log("i m listening");
 });
 
